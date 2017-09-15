@@ -7,5 +7,5 @@
 </h1>
 
 <h4 align="center">
-  🤖 This is Infinibot: A multi-purpose, modular and fun bot!
+  🤖 This is Esthro: A multi-purpose, modular and fun bot!
 </h4>
