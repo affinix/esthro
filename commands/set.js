@@ -1,8 +1,7 @@
 const Discord = require(`discord.js`);
 const { inspect } = require(`util`);
 
-exports.run = async (client, message, [action, key, ...value], level) => {
-
+exports.run = async (client, message, [action, key, ...value], level) => { // eslint-disable-line no-unused-vars
     const settings = client.settings.get(message.guild.id);
 
     console.log(settings);
@@ -11,19 +10,19 @@ exports.run = async (client, message, [action, key, ...value], level) => {
         if (!key) {
             await message.channel.sendEmbed(new Discord.RichEmbed()
                 .addField(`Error!`, `Please specify a key to edit...`)
-                .setColor(0xff5454),);
+                .setColor(0xffffff));
             return;
         }
         if (!settings[key]) {
             await message.channel.sendEmbed(new Discord.RichEmbed()
                 .addField(`Error!`, `That key does not exist!`)
-                .setColor(0xff5454),);
+                .setColor(0xffffff));
             return;
         }
         if (value.length < 1) {
             await message.channel.sendEmbed(new Discord.RichEmbed()
                 .addField(`Error!`, `Please specify a new value`)
-                .setColor(0xff5454),);
+                .setColor(0xffffff));
             return;
         }
 
@@ -32,19 +31,19 @@ exports.run = async (client, message, [action, key, ...value], level) => {
         client.settings.set(message.guild.id, settings);
         message.channel.sendEmbed(new Discord.RichEmbed()
             .addField(`Success!`, `${key} successfully edited to ${value.join(` `)}`)
-            .setColor(0x5697ff),);
+            .setColor(0xffffff));
     } else
     if (action === `get`) {
         if (!key) {
             message.channel.sendEmbed(new Discord.RichEmbed()
                 .addField(`Error!`, `Please specify a key to view`)
-                .setColor(0xff5454),);
+                .setColor(0xffffff));
             return;
         }
         if (!settings[key]) {
             await message.channel.sendEmbed(new Discord.RichEmbed()
                 .addField(`Error!`, `This key does not exist in the settings`)
-                .setColor(0xff5454),);
+                .setColor(0xff5454));
         }
         message.reply(`The value of ${key} is currently ${settings[key]}`);
     } else {
@@ -56,13 +55,12 @@ exports.conf = {
     enabled: true,
     guildOnly: true,
     aliases: [`setting`, `settings`, `conf`],
-    permLevel: 3,
+    permLevel: `Adminisrator`,
 };
 
 exports.help = {
     name: `set`,
     category: `System`,
-    description: `View or change settings for your server.`,
-    furtherDescription: `I set the settings for this server! Requires perm level 3`,
+    extendedDescription: `I set the settings for this server! Requires perm level 3`,
     usage: `set [view/get/edit] [key] [value]`,
 };

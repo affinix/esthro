@@ -43,5 +43,6 @@ exports.help = {
     name: `reload`,
     category: `System`,
     description: `Reloads a command that's been modified.`,
+    extendedDescription: `I will reload a command so that you dont have to restart the bot!`,
     usage: `reload [command]`,
 };
