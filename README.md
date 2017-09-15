@@ -11,10 +11,8 @@
   <br><br>
 </h4>
 
-<h2 align="center">
-  So who, or what, is esthro?
-</h2>
+------------------------
 
-<p align="center">
-  Esthro is an modular discord bot written in discord.js by <a href="https://github.com/Affinix">Affinix<a>.
-</p>
+## So who, or what, is esthro?
+Esthro is an modular discord bot written in discord.js by <a href="https://github.com/Affinix">Affinix<a>, and is recieving updates and new commands daily. Currently the bot is private and under development, but you could clone this repo and run it yourself, if you know how to.
+
