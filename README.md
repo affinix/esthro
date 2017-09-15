@@ -8,4 +8,13 @@
 
 <h4 align="center">
   🤖 This is Esthro: A multi-purpose, modular and fun bot!
+  <br><br>
 </h4>
+
+<h2 align="center">
+  So who, or what, is esthro?
+<h3>
+
+<p align="center">
+  Esthro is an modular discord bot written in discord.js by <a href="https://github.com/Affinix">Affinix<a>.
+<p>
