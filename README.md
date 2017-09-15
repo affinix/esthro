@@ -13,7 +13,7 @@
 
 <h2 align="center">
   So who, or what, is esthro?
-<h3>
+<h2>
 
 <p align="center">
   Esthro is an modular discord bot written in discord.js by <a href="https://github.com/Affinix">Affinix<a>.
