@@ -7,8 +7,9 @@
 </h1>
 
 <h4 align="center">
-  🤖 This is Esthro: A multi-purpose, modular and fun bot!
-  <br><br>
+  <br>
+  🤖 This is Esthro: A multi-purpose, modular and fun discord bot built with Node.js and Discord.js
+  <br>
 </h4>
 
 ------------------------
@@ -30,3 +31,23 @@ Some features that are soming in the future are:
   - Moderation Commands
   - Utilty Commands
   
+## How do I add it?
+Currently, the bot is under heavy development, so it is not avaliable to add to your server yet, but you can self-host it (See instructions below)
+
+## Requirements (for self hosting)
+  - `git` command line ([Windows](https://git-scm.com/download/win) | [Mac](https://git-scm.com/download/mac))
+  - `node.js` v8 or higher ([Windows](https://nodejs.org/dist/v8.5.0/node-v8.5.0-x86.msi) | [Mac](https://nodejs.org/dist/v8.5.0/node-v8.5.0.pkg))
+
+You will also require a discord bot, discord bot token and an invite link ([Discord Developers Site](https://discordapp.com/developers/applications/me) | [Permissions Calculator](https://finitereality.github.io/permissions-calculator/?v=0))
+
+## Self Hosting
+First, In the commands line of where you would like to install it, run this:
+`git clone https://github.com/Affinix/esthro.git`
+
+Once that's done:
+  - Run `npm install` in the command like where your bot files are
+  - Rename config.js.example to config.js
+  - Replace the Owner ID and Bot Token with your id and your bot's token.
+  - do node index.js and the bot should start up
+  
+
