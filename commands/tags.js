@@ -8,11 +8,23 @@ exports.run = async (client, message, [action, name, ...content], level) => { //
     const tags = client.tags.get(message.guild.id);
 
     if (!action) {
+        const list = [];
+        for (const i in tags) {
+            list.push(i);
+        }
+        if (list.length < 1) {
+            const embed = new Discord.RichEmbed()
+                .addField(`Error!`, `No tags exist yet! Make one by doing ${settings.prefix}tags add [name] [content]`)
+                .setColor(0xffffff);
+            message.channel.send({ embed });
+            return undefined;
+        }
+        const str = list.join(`, `);
         const embed = new Discord.RichEmbed()
-            .addField(`Syntax Error!`, `Please Give me an action! \`${settings.prefix}tags [add/edit/list/delete] <name> <content>\``)
+            .addField(`Tags:`, `\`\`\`${str}\`\`\``)
             .setColor(0xffffff);
         message.channel.send({ embed });
-        return undefined;
+        return;
     }
 
     switch (action.toLowerCase()) {
@@ -140,10 +152,25 @@ exports.run = async (client, message, [action, name, ...content], level) => { //
         }
         break;
     default:
-        console.log(tags)
         const tag = tags[action];
-        console.log(tag);
-        if (!tag) return console.log('nope');
+        if (!tag) {
+            const list = [];
+            for (const i in tags) {
+                list.push(i);
+            }
+            if (list.length < 1) {
+                const embed = new Discord.RichEmbed()
+                    .addField(`Error!`, `No tags exist yet! Make one by doing ${settings.prefix}tags add [name] [content]`)
+                    .setColor(0xffffff);
+                message.channel.send({ embed });
+                return undefined;
+            }
+            const str = list.join(`, `);
+            const embed = new Discord.RichEmbed()
+                .addField(`Tags:`, `\`\`\`${str}\`\`\``)
+                .setColor(0xffffff);
+            message.channel.send({ embed });
+        }
         message.channel.send(tag);
         break;
     }
