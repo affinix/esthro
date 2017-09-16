@@ -20,6 +20,6 @@ exports.help = {
     name: `ping`,
     category: `Miscelaneous`,
     description: `Pong! Checks delay time.`,
-    extendedDescription: `Pong! I will tell tou how long the message took to send!`,
+    extendedDescription: `Pong! I will tell you how long the message took to send!`,
     usage: `ping`,
 };

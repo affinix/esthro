@@ -55,12 +55,13 @@ exports.conf = {
     enabled: true,
     guildOnly: true,
     aliases: [`setting`, `settings`, `conf`],
-    permLevel: `Adminisrator`,
+    permLevel: `Administrator`,
 };
 
 exports.help = {
     name: `set`,
     category: `System`,
+    Desccription: `Settings for this server`,
     extendedDescription: `I set the settings for this server! Requires perm level 3`,
     usage: `set [view/get/edit] [key] [value]`,
 };
