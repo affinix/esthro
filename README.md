@@ -45,7 +45,7 @@ First, In the commands line of where you would like to install it, run this:
 `git clone https://github.com/Affinix/esthro.git`
 
 Once that's done:
-  - Run `npm install` in the command like where your bot files are
+  - Run `npm install` in the command line where your bot files are
   - Rename config.js.example to config.js
   - Replace the Owner ID and Bot Token with your id and your bot's token.
   - do node index.js and the bot should start up
