@@ -20,11 +20,12 @@ Esthro is an modular discord bot written in discord.js by <a href="https://githu
 ## What can it do?
 Esthro is currently is in development, but currently has:
   - System commands
-  - tag commands
+  - Tag commands
+  - Colored Role Commands
+  - Image Manipulation
 
 Some features that are soming in the future are:
   - Music
-  - Image Manipulation
   - Currency
   - Games
   - Fun Commands
