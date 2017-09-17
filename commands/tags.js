@@ -14,7 +14,7 @@ exports.run = async (client, message, [action, name, ...content], level) => { //
         }
         if (list.length < 1) {
             const embed = new Discord.RichEmbed()
-                .addField(`Error!`, `No tags exist yet! Make one by doing ${settings.prefix}tags add [name] [content]`)
+                .addField(`:no_entry_sign: | Error!`, `No tags exist yet! Make one by doing ${settings.prefix}tags add [name] [content]`)
                 .setColor(0xffffff);
             message.channel.send({ embed });
             return undefined;
@@ -32,7 +32,7 @@ exports.run = async (client, message, [action, name, ...content], level) => { //
         if (!level >= 2) return;
         if (!name) {
             const embed = new Discord.RichEmbed()
-                .addField(`Syntax Error!`, `Please give me the name and content of the tag! \`${settings.prefix}tags [add/edit/list/delete] <name> <content>\``)
+                .addField(`:no_entry_sign: | Syntax Error!`, `Please give me the name and content of the tag! \`${settings.prefix}tags [add/edit/list/delete] <name> <content>\``)
                 .setColor(0xffffff);
             message.channel.send({ embed });
             return undefined;
@@ -40,7 +40,7 @@ exports.run = async (client, message, [action, name, ...content], level) => { //
         if (!tags.hasOwnProperty(name)) {
             if (!content) {
                 const embed = new Discord.RichEmbed()
-                    .addField(`Syntax Error!`, `Please give me the content of the tag! \`${settings.prefix}tags [add/edit/list/delete] <name> <content>\``)
+                    .addField(`:no_entry_sign: | Syntax Error!`, `Please give me the content of the tag! \`${settings.prefix}tags [add/edit/list/delete] <name> <content>\``)
                     .setColor(0xffffff);
                 message.channel.send({ embed });
                 return undefined;
@@ -55,20 +55,20 @@ exports.run = async (client, message, [action, name, ...content], level) => { //
         } else {
             if (!name) {
                 const embed = new Discord.RichEmbed()
-                    .addField(`Syntax Error!`, `Please give me the name and content of the tag! \`${settings.prefix}tags [add/edit/list/delete] <name> <content>\``)
+                    .addField(`:no_entry_sign: | Syntax Error!`, `Please give me the name and content of the tag! \`${settings.prefix}tags [add/edit/list/delete] <name> <content>\``)
                     .setColor(0xffffff);
                 message.channel.send({ embed });
                 return undefined;
             }
             if (!content) {
                 const embed = new Discord.RichEmbed()
-                    .addField(`Syntax Error!`, `Please give me the content of the tag! \`${settings.prefix}tags [add/edit/list/delete] <name> <content>\``)
+                    .addField(`:no_entry_sign: | Syntax Error!`, `Please give me the content of the tag! \`${settings.prefix}tags [add/edit/list/delete] <name> <content>\``)
                     .setColor(0xffffff);
                 message.channel.send({ embed });
                 return undefined;
             }
             const embed = new Discord.RichEmbed()
-                .addField(`Error!`, `That tag already exists! Want to edit it? Do \`${settings.prefix}tags edit ${name} ${content.join(` `)}\``)
+                .addField(`:no_entry_sign: | Error!`, `That tag already exists! Want to edit it? Do \`${settings.prefix}tags edit ${name} ${content.join(` `)}\``)
                 .setColor(0xffffff);
             message.channel.send({ embed });
             return undefined;
@@ -78,14 +78,14 @@ exports.run = async (client, message, [action, name, ...content], level) => { //
         if (!level >= 2) return;
         if (!name) {
             const embed = new Discord.RichEmbed()
-                .addField(`Syntax Error!`, `Please give me the name of the tag! \`${settings.prefix}tags [add/edit/list/delete] <name> <content>\``)
+                .addField(`:no_entry_sign: | Syntax Error!`, `Please give me the name of the tag! \`${settings.prefix}tags [add/edit/list/delete] <name> <content>\``)
                 .setColor(0xffffff);
             message.channel.send({ embed });
             return undefined;
         }
         if (!tags.hasOwnProperty(name)) {
             const embed = new Discord.RichEmbed()
-                .addField(`Error!`, `That tag does not exist! Want to add it? Do \`${settings.prefix}tags edit ${name} <content>\``)
+                .addField(`:no_entry_sign: | Error!`, `That tag does not exist! Want to add it? Do \`${settings.prefix}tags add ${name} [content]\``)
                 .setColor(0xffffff);
             message.channel.send({ embed });
         } else {
@@ -97,7 +97,7 @@ exports.run = async (client, message, [action, name, ...content], level) => { //
                     .setColor(0xffffff);
                 message.channel.send({ embed });
             } catch (error) {
-                message.channel.send(`Something went wrong! \`${error}\``);
+                message.channel.send(`:no_entry_sign: | Something went wrong! \`${error}\``);
                 console.log(error.stack);
             }
         }
@@ -109,7 +109,7 @@ exports.run = async (client, message, [action, name, ...content], level) => { //
         }
         if (list.length < 1) {
             const embed = new Discord.RichEmbed()
-                .addField(`Error!`, `No tags exist yet! Make one by doing ${settings.prefix}tags add [name] [content]`)
+                .addField(`:no_entry_sign: | Error!`, `No tags exist yet! Make one by doing ${settings.prefix}tags add [name] [content]`)
                 .setColor(0xffffff);
             message.channel.send({ embed });
             return undefined;
@@ -124,14 +124,14 @@ exports.run = async (client, message, [action, name, ...content], level) => { //
         if (!level >= 2) return;
         if (!name) {
             const embed = new Discord.RichEmbed()
-                .addField(`Syntax Error!`, `Please give me the name of the tag! \`${settings.prefix}tags [add/edit/list/delete] <name> <content>\``)
+                .addField(`:no_entry_sign: | Syntax Error!`, `Please give me the name of the tag! \`${settings.prefix}tags [add/edit/list/delete] <name> <content>\``)
                 .setColor(0xffffff);
             message.channel.send({ embed });
             return undefined;
         }
         if (!tags.hasOwnProperty(name)) {
             const embed = new Discord.RichEmbed()
-                .addField(`Error!`, `That tag does not exist! Want to add it? \`Do ${settings.prefix}tags edit ${name} <content>\``)
+                .addField(`:no_entry_sign: | Error!`, `That tag does not exist! Want to add it? \`Do ${settings.prefix}tags add ${name} <content>\``)
                 .setColor(0xffffff);
             message.channel.send({ embed });
         } else {
@@ -160,7 +160,7 @@ exports.run = async (client, message, [action, name, ...content], level) => { //
             }
             if (list.length < 1) {
                 const embed = new Discord.RichEmbed()
-                    .addField(`Error!`, `No tags exist yet! Make one by doing ${settings.prefix}tags add [name] [content]`)
+                    .addField(`:no_entry_sign: | Error!`, `No tags exist yet! Make one by doing ${settings.prefix}tags add [name] [content]`)
                     .setColor(0xffffff);
                 message.channel.send({ embed });
                 return undefined;
@@ -188,5 +188,5 @@ exports.help = {
     category: `Utility`,
     description: `Show or modify tags.`,
     extendedDescription: `\`\`\`e!tags add [name] [content]\ne!tags delete [name]\ne!tags edit [existingTag] [newContent]\ne!tags list\`\`\``,
-    usage: `tags [add/remove/edit/list/tagName] <name> <content>`,
+    usage: `tags [add/remove/edit/list/tag] <name> <content>`,
 };

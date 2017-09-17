@@ -33,7 +33,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
         }
         await message.channel.sendEmbed(new Discord.RichEmbed()
             .addField(`Input:`, `\`\`\`js\n${code}\n\`\`\``)
-            .addField(`Error!`, `\`\`\`xl\n${errClean}\n\`\`\``)
+            .addField(`:no_entry_sign: | Error!`, `\`\`\`xl\n${errClean}\n\`\`\``)
             .setColor(0xffffff));
     }
 };

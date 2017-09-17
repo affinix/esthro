@@ -14,7 +14,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
         });
     } else if (message.mentions.users.size > 1) {
         message.channel.sendEmbed(new Discord.RichEmbed()
-            .addField(`Error!`, `Please mention a single user!`)
+            .addField(`:no_entry_sign: | Error!`, `Please mention a single user!`)
             .setColor(0xff5454));
     } else {
         const mention = message.guild.member(message.mentions.users.first());

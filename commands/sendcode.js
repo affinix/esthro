@@ -10,7 +10,7 @@ exports.run = async (client, message, args) => {
     }
     if (!command) {
         message.channel.sendEmbed(new Discord.RichEmbed()
-            .addField(`Error!`, `The command \`${args[0]}\` doesn't seem to exist...`)
+            .addField(`:no_entry_sign: | Error!`, `The command \`${args[0]}\` doesn't seem to exist...`)
             .setColor(0xffffff));
         return;
     }
