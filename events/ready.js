@@ -4,4 +4,7 @@ module.exports = async (client) => {
     client.guilds.filter(g => !client.settings.has(g.id)).forEach((g) => {
         client.settings.set(g.id, client.config.defaultSettings);
     });
+    client.guilds.filter(g => !client.tags.has(g.id)).forEach((g) => {
+        client.tags.set(g.id, {});
+    })
 };

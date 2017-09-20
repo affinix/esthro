@@ -7,15 +7,20 @@ const Enmap = require(`enmap`);
 
 const client = new Discord.Client();
 
-client.config = require(`./config.js`);
+client.config = require(`./config.js`)
 
 require(`./util/functions.js`)(client);
 
 client.commands = new Enmap();
 client.aliases = new Enmap();
+client.conn4 = new Map();
+client.conn4.set('id', 0)
+client.conn4M = new Map();
 
 client.settings = new Enmap({ name: `settings`, persistent: true });
 client.esthros = new Enmap({ name: `esthros`, persistent: true });
+client.tags = new Enmap({ name: `tags`, persistent: true });
+
 
 const init = async () => {
     const cmdFiles = await readdir(`./commands/`);
