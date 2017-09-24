@@ -9,9 +9,6 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
         ? client.settings.get(message.guild.id)
         : client.config.defaultSettings;
 
-    console.log(roles);
-    console.log(mRoles);
-
     if (!perms) {
         const embed = new Discord.RichEmbed()
             .addField(`:no_entry_sign: | Error!`, `I do not have permissions to do that! Please make sure I have the \`Manage Roles\` permission!`)
